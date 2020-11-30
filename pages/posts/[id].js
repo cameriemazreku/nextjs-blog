@@ -6,7 +6,8 @@ import utilStyles from '../../styles/utils.module.css'
 
 
 export default function Post({ postData }) {
-    return <Layout>
+    return(
+        <Layout>
         <Head>
             <title>{postData.title}</title>
         </Head>
@@ -16,6 +17,7 @@ export default function Post({ postData }) {
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }}/>
     </Layout>
+    )
 }
 
 export async function getStaticPaths() {
